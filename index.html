@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/atm.css" />
+    <title>ATM</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">ATM</div>
+      <!-- Top Section START -->
+      <div class="top">
+        <div class="left-side">
+          <div class="display-container">
+            <div class="right-btn">
+              <button value="d" class="deposite">d</button>
+              <button value="w" class="withdraw">w</button>
+              <button value="c" class="check-balance">c</button>
+              <span></span>
+            </div>
+            <!-- ATM Screen Section START  -->
+            <div class="display">
+              <!-- Message to user on screen START -->
+              <div class="msg"></div>
+              <!-- Message to user on screen END -->
+              <!-- Inputs Display START -->
+              <div class="userInp"></div>
+              <!-- Inputs Display END -->
+            </div>
+            <!-- ATM Screen Section END  -->
+            <div class="left-btn">
+              <button value="q" class="quit">q</button>
+              <button value="p" class="pin-code-change">p</button>
+              <button value="r" class="create-receipt">r</button>
+            </div>
+          </div>
+        </div>
+        <div class="right-side">
+          <div class="credit-card">
+            <h1>Card</h1>
+            <div class="circle">
+              <div class="inner-content">
+                <img
+                  id="credit-card"
+                  src="/images/card.png"
+                  alt="credit card"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="cash">
+            <h1>Cash</h1>
+            <div class="cash-open"><div class="inner"></div></div>
+          </div>
+        </div>
+      </div>
+      <!-- Top Section END -->
+
+      <!-- Bottom Section START -->
+      <div class="bottom">
+        <div class="number-board">
+          <form action="">
+            <div>
+              <input type="button" value="7" />
+              <input type="button" value="8" />
+              <input type="button" value="9" />
+            </div>
+            <div>
+              <input type="button" value="4" />
+              <input type="button" value="5" />
+              <input type="button" value="6" />
+            </div>
+            <div>
+              <input type="button" value="1" />
+              <input type="button" value="2" />
+              <input type="button" value="3" />
+            </div>
+            <div>
+              <button type="button" class="clear">clear</button>
+              <input type="button" value="0" />
+              <button type="button" class="enter">enter</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- Bottom Section END -->
+    </div>
+    <script src="/js/atm.js"></script>
+  </body>
+</html>

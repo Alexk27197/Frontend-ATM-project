@@ -1,0 +1,432 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  width: 100%;
+  padding-top: 20px;
+  padding-right: 200px;
+  padding-left: 200px;
+  padding-bottom: 100px;
+}
+.container {
+  width: 100%;
+  min-height: 850px;
+  background: linear-gradient(
+    rgb(23, 22, 22),
+    rgb(62, 61, 61),
+    rgb(104, 102, 102)
+  );
+  overflow: hidden;
+  padding: 0 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.title {
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(
+    rgb(194, 185, 16),
+    rgb(146, 124, 0),
+    rgb(194, 185, 16)
+  );
+  box-shadow: 0px 0px 8px 10px rgba(0, 0, 0, 0.427);
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  color: white;
+  text-shadow: 0px 0px 20px rgb(255, 255, 0);
+}
+
+.top {
+  width: 87%;
+  height: 600px;
+  background-color: rgba(221, 212, 212, 0.191);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.427);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.left-side {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+.display-container {
+  display: flex;
+  width: 100%;
+  height: 300px;
+  margin-top: 120px;
+  gap: 20px;
+}
+.user-input {
+  width: 300px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.384);
+  border: 0;
+  font-size: 20px;
+  text-align: center;
+}
+.user-input::placeholder {
+  color: black;
+}
+.right-btn {
+  width: 80px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.right-btn button {
+  padding: 15px 25px;
+  margin: 10px;
+  border: 0;
+  outline: 0;
+  position: relative;
+  background-color: #696969;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0px 0px 10px 0px black;
+  transition: all 0.4s;
+}
+.right-btn button:hover {
+  background-color: rgba(255, 255, 255, 0.491);
+  transform: translateY(2px);
+}
+.right-btn button::after {
+  content: "";
+  width: 28px;
+  height: 4px;
+  right: -30px;
+  top: 20px;
+  z-index: 0;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+.left-btn {
+  width: 80px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-btn button {
+  padding: 15px 25px;
+  margin: 10px;
+  border: 0;
+  outline: 0;
+  position: relative;
+  background-color: #696969;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0px 0px 10px 0px black;
+  transition: all 0.4s;
+}
+.left-btn button:hover {
+  background-color: rgba(255, 255, 255, 0.491);
+  transform: translateY(2px);
+}
+.left-btn button::after {
+  content: "";
+  width: 28px;
+  height: 4px;
+  left: -30px;
+  top: 20px;
+  z-index: 0;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+
+.display {
+  /* flex-grow: 1; */
+  width: 90%;
+  background-color: rgba(255, 255, 255, 0.765);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px black;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userName-btn {
+  background-color: black;
+  color: white;
+  padding: 5px 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.msg {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.msg h2 {
+  text-align: center;
+}
+.userInp {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.userInp label {
+  font-size: 24px;
+  font-weight: bold;
+}
+.userInp input {
+  width: 220px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.265);
+  font-size: 20px;
+  border: 1px solid green;
+  text-align: center;
+}
+.userInp input:focus {
+  border: 3px solid green;
+}
+.pincode-input {
+  display: none;
+}
+.deposite-input {
+  display: none;
+}
+.withdraw-input {
+  display: none;
+}
+.change-pincode-input {
+  display: none;
+}
+.money-option {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.money-option li {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.money-option li button {
+  width: 90px;
+  height: 40px;
+  background-color: #38b54d;
+  border: 0;
+  border-radius: 10px;
+  margin: 4px;
+  transition: all 0.4s;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.money-option li button:hover {
+  background-color: #08cb29d0;
+}
+.menu {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu ol {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.menu ol li {
+  margin: 4px;
+  font-size: 24px;
+}
+.right-side {
+  width: 100%;
+  min-height: max-content;
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+}
+.credit-card {
+  flex-basis: 28%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.credit-card h1 {
+  color: white;
+}
+.circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 5px 10px 0px black;
+}
+.circle div {
+  width: 90%;
+  height: 10px;
+  background-color: rgba(0, 0, 0, 0.614);
+  /* box-shadow: 0px 5px 10px 0px black; */
+  border-radius: 10px;
+  position: relative;
+  transition: all 1s;
+}
+
+.circle div img {
+  position: absolute;
+  width: 105px;
+  cursor: pointer;
+  clip-path: inset(0px 0px 0px 0px);
+  transition: all 1s;
+}
+.card-animate-on {
+  transition: all 1s;
+  animation: animate 10s forwards;
+}
+@keyframes animate {
+  0% {
+    top: 0px;
+    clip-path: inset(0px 0px 0px 0px);
+  }
+  50% {
+    top: -218px;
+    clip-path: inset(230px 0px 0px 0px);
+  }
+  100% {
+    top: -235px;
+    clip-path: inset(220px 0px 0px 0px);
+  }
+}
+.circle div img:hover {
+  transform: translateY(-2px);
+}
+
+.cash {
+  flex-grow: 1;
+  flex-basis: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.cash h1 {
+  margin-left: 220px;
+  color: white;
+}
+.cash .cash-open {
+  width: 300px;
+  height: 80px;
+  background-color: #9c9b9c;
+  margin-left: 220px;
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(0, 0, 0, 0.15) 100%
+    ),
+    radial-gradient(
+        at top center,
+        rgba(255, 255, 255, 0.4) 0%,
+        rgba(0, 0, 0, 0.4) 120%
+      )
+      #989898;
+  box-shadow: 2px 4px 7px -2px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inner {
+  width: 90%;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.178);
+  /* box-shadow: 2px 4px 7px -2px black; */
+  border-radius: 10px;
+}
+/* top style end*/
+/* bottom style start*/
+.bottom {
+  width: 100%;
+  height: 450px;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.427);
+  transform: perspective(30px) rotateX(1deg) translateY(-34px);
+}
+.number-board {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.number-board form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.number-board form input {
+  width: 80px;
+  height: 80px;
+  border: 0;
+  outline: 0;
+  margin: 5px;
+  background-color: rgba(0, 0, 0, 0.219);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 2px 4px 7px -2px black;
+  transition: all 0.4s;
+}
+.number-board form button {
+  width: 80px;
+  height: 80px;
+  border: 0;
+  outline: 0;
+  margin: 5px;
+  background-color: rgba(0, 0, 0, 0.219);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 2px 4px 7px -2px black;
+  transition: all 0.4s;
+}
+.number-board form button:hover {
+  transform: translateY(2px);
+}
+.number-board form .clear {
+  background-color: rgb(197, 197, 35);
+}
+.number-board form .enter {
+  background-color: rgb(2, 201, 2);
+}
+
+.number-board form input:hover {
+  background-color: rgba(0, 0, 0, 0.263);
+  transform: translateY(2px);
+}
+/* bottom style end*/
